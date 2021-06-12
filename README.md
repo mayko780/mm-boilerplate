@@ -1,4 +1,4 @@
-# Webpack / Typescript / TailwindCSS / PostCSS
+# Webpack / Typescript / TailwindCSS / PostCSS Boilerplate
 
 To get started please configure:
 
