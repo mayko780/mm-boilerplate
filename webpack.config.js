@@ -5,41 +5,46 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
+const pathDist = path.resolve(__dirname, 'dist');
+
+const faviconSettings = {
+  logo: './src/assets/img/mm_black.png',
+  favicons: {
+    background: '#222',
+    theme_color: '#a2ff00',
+  },
+};
+if (devMode) {
+  faviconSettings.favicons.icons = {
+    android: false,
+    appleIcon: false,
+    appleStartup: false,
+    coast: false,
+    firefox: false,
+    windows: false,
+    yandex: false,
+  };
+}
 
 const plugins = [
   new CleanWebpackPlugin(),
   new HtmlWebpackPlugin({
     template: './src/index.html',
   }),
+  new FaviconsWebpackPlugin(faviconSettings),
   new MiniCssExtractPlugin({
     filename: devMode ? '[name].css' : '[name].[contenthash].css',
     chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
   }),
 ];
 
-if (devMode) {
-  plugins.push(
-    new FaviconsWebpackPlugin({
-      logo: './src/assets/img/mm_black.png',
-      favicons: {
-        background: '#222',
-        theme_color: '#a2ff00',
-        icons: {
-          coast: false,
-          yandex: false,
-        },
-      },
-    })
-  );
-}
-
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   target: devMode ? 'web' : 'browserslist',
   output: {
-    filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[hash][ext][query]',
-    path: path.resolve(__dirname, 'dist'),
+    filename: devMode ? '[name].js' : '[name].[contenthash].js',
+    assetModuleFilename: devMode ? 'assets/[ext][query]' : 'assets/[hash][ext][query]',
+    path: pathDist,
   },
   module: {
     rules: [
@@ -52,11 +57,9 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.ts?$/i,
+        test: /\.(js|ts)x?$/i,
         exclude: /node_modules/,
-        use: {
-          loader: 'ts-loader',
-        },
+        use: 'babel-loader',
       },
       {
         test: /\.svg/,
@@ -65,10 +68,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: pathDist,
     hot: true,
   },
   devtool: devMode ? 'source-map' : false,
