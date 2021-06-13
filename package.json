@@ -2,6 +2,7 @@
   "name": "mm-boilerplate",
   "version": "1.0.0",
   "main": "dist/main.js",
+  "private": true,
   "scripts": {
     "start": "webpack server",
     "build": "NODE_ENV=production webpack",
