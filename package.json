@@ -1,5 +1,5 @@
 {
-  "name": "mm-boilerplate",
+  "name": "@mirkonz/boilerplate",
   "version": "1.0.0",
   "main": "dist/main.js",
   "private": true,
