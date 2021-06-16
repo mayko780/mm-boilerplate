@@ -8,9 +8,12 @@
     "build": "NODE_ENV=production webpack",
     "build:dev": "webpack"
   },
+  "bin": {
+    "mirkonz-boilerplate": "./bin/index.js"
+  },
   "author": "Mirko May <hi@mirko.nz> (http://mirko.nz/)",
   "license": "ISC",
-  "description": "",
+  "description": "Webpack / Typescript / TailwindCSS / PostCSS Boilerplate",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.5",
@@ -29,11 +32,23 @@
     "postcss": "^8.3.2",
     "postcss-loader": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
+    "recursive-copy": "^2.0.11",
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.1.4",
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
-  }
+  },
+  "dependencies": {
+    "commander": "^7.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirkonz/boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mirkonz/boilerplate/issues"
+  },
+  "homepage": "https://github.com/mirkonz/boilerplate#readme"
 }
