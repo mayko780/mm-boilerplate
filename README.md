@@ -1,32 +1,28 @@
 # Webpack / Typescript / TailwindCSS / PostCSS Boilerplate
 
+with ESLint, Prettier, Husky and lint-staged for a modern developer-workflow.
+
 ## Installation
 
 Run:
 
 ```bash
-npx @mirkonz-boilerplate init my-project
+npx mirkonz-boilerplate init my-project
 ```
 
-which creates a `my-project` folder with the boilerplate.
+which creates a `my-project` project folder with the boilerplate.
+
+## To get started run
 
 ```bash
 cd my-project
 ```
 
-## To get started run
-
 ```bash
 npm i
 ```
 
-Configure:
-
-- webpack.config.js
-- postcss.config.js
-- tailwind.config.js
-
-and customize the `./src` folder to you liking. 🚀
+Customize the `./src` folder and the all the configs to you liking. 🚀
 
 **Start dev server:**
 
@@ -39,3 +35,7 @@ npm start
 ```bash
 npm run build
 ```
+
+## Tip
+
+The [favicons](https://www.npmjs.com/package/favicons) can be configured in the `webpack.config.js`

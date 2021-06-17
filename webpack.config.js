@@ -1,11 +1,12 @@
-const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
-const devMode = process.env.NODE_ENV !== 'production';
-const pathDist = path.resolve(__dirname, 'dist');
+const devMode = process.env.NODE_ENV !== 'production'
+const pathDist = path.resolve(__dirname, 'dist')
 
 const faviconSettings = {
   logo: './src/assets/img/mm_black.png',
@@ -13,7 +14,7 @@ const faviconSettings = {
     background: '#222',
     theme_color: '#a2ff00',
   },
-};
+}
 if (devMode) {
   faviconSettings.favicons.icons = {
     android: false,
@@ -23,7 +24,7 @@ if (devMode) {
     firefox: false,
     windows: false,
     yandex: false,
-  };
+  }
 }
 
 const plugins = [
@@ -36,14 +37,16 @@ const plugins = [
     filename: devMode ? '[name].css' : '[name].[contenthash].css',
     chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css',
   }),
-];
+]
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   target: devMode ? 'web' : 'browserslist',
   output: {
     filename: devMode ? '[name].js' : '[name].[contenthash].js',
-    assetModuleFilename: devMode ? 'assets/[ext][query]' : 'assets/[hash][ext][query]',
+    assetModuleFilename: devMode
+      ? 'assets/[ext][query]'
+      : 'assets/[hash][ext][query]',
     path: pathDist,
   },
   module: {
@@ -75,5 +78,8 @@ module.exports = {
     hot: true,
   },
   devtool: devMode ? 'source-map' : false,
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+  },
   plugins: plugins,
-};
+}

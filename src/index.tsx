@@ -1,11 +1,11 @@
-import './css/styles.css';
+import './css/styles.css'
 
 interface World {
-  greeting: string;
+  greeting: string
 }
 
 const hello: World = {
   greeting: 'Hello world! 🚀',
-};
+}
 
-console.log(hello.greeting);
+console.log(hello.greeting)
