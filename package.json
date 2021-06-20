@@ -19,7 +19,7 @@
   "description": "Webpack / Typescript / TailwindCSS / PostCSS Boilerplate",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.5",
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
@@ -29,7 +29,7 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "css-loader": "^5.2.6",
     "css-minimizer-webpack-plugin": "^3.0.1",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
@@ -44,18 +44,18 @@
     "lint-staged": "^11.0.0",
     "micromatch": "^4.0.4",
     "mini-css-extract-plugin": "^1.6.0",
-    "postcss": "^8.3.2",
+    "postcss": "^8.3.5",
     "postcss-loader": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.1",
     "recursive-copy": "^2.0.11",
+    "semantic-release": "^17.4.4",
     "style-loader": "^2.0.0",
-    "tailwindcss": "^2.1.4",
-    "typescript": "^4.3.2",
-    "webpack": "^5.38.1",
+    "tailwindcss": "^2.2.2",
+    "typescript": "^4.3.4",
+    "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
-    "semantic-release": "^17.4.4"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "commander": "^7.2.0"
