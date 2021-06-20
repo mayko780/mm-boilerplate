@@ -1,6 +1,6 @@
 {
   "name": "@mirkonz/boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "dist/main.js",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "NODE_ENV=production webpack",
     "prepare": "husky install",
     "start": "webpack server",
-    "test": "echo \"Error, not tests specified\"; exit 1;"
+    "test": "echo \"Error, not tests specified\"; exit 1;",
+    "semantic-release": "semantic-release"
   },
   "bin": {
     "mirkonz-boilerplate": "./bin/index.js"
@@ -53,14 +54,15 @@
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "semantic-release": "^17.4.4"
   },
   "dependencies": {
     "commander": "^7.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mirkonz/boilerplate.git"
+    "url": "https://github.com/mirkonz/boilerplate.git"
   },
   "bugs": {
     "url": "https://github.com/mirkonz/boilerplate/issues"
