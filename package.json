@@ -3,6 +3,9 @@
   "version": "0.0.0-development",
   "main": "dist/main.js",
   "private": true,
+  "engines": {
+    "node": ">=12 <14"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build": "NODE_ENV=production webpack",
