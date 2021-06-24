@@ -1,4 +1,4 @@
-# Webpack / Typescript / TailwindCSS / PostCSS Boilerplate
+# Webpack / Typescript / TailwindCSS / PostCSS & Jest Boilerplate
 
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
@@ -9,10 +9,10 @@ with ESLint, Prettier, Husky and lint-staged for a modern developer-workflow.
 Run:
 
 ```bash
-npx mirkonz-boilerplate init my-project
+npx mirkonz-boilerplate init my-new-project-name
 ```
 
-which creates a `my-project` project folder with the boilerplate.
+which creates a `my-new-project-name` project folder in the current directory including the boilerplate.
 
 ## To get started run
 
@@ -29,6 +29,8 @@ To setup a CICD pipeline run the following command:
 ```bash
 npx semantic-release-cli setup
 ```
+
+Add NPM_TOKEN Secret to your Github repo settings
 
 Customize the `./src` folder and the all the configs to you liking. 🚀
 

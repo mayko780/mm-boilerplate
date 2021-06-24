@@ -15,17 +15,6 @@ const faviconSettings = {
     theme_color: '#a2ff00',
   },
 }
-if (devMode) {
-  faviconSettings.favicons.icons = {
-    android: false,
-    appleIcon: false,
-    appleStartup: false,
-    coast: false,
-    firefox: false,
-    windows: false,
-    yandex: false,
-  }
-}
 
 const plugins = [
   new CleanWebpackPlugin(),

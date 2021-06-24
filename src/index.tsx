@@ -4,8 +4,18 @@ interface World {
   greeting: string
 }
 
-const hello: World = {
-  greeting: 'Hello world! 🚀',
+export class Hello {
+  world: World
+
+  constructor() {
+    this.world = {
+      greeting: 'Hello world! 🚀',
+    }
+  }
+
+  greeting = () => this.world.greeting
 }
 
-console.log(hello.greeting)
+const hello = new Hello()
+
+console.log(hello.greeting())

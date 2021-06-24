@@ -7,11 +7,11 @@
     "node": ">=12 <14"
   },
   "scripts": {
-    "build:dev": "webpack",
+    "build:dev": "NODE_ENV=development webpack",
     "build": "NODE_ENV=production webpack",
     "prepare": "husky install",
     "start": "webpack server",
-    "test": "echo \"Error, not tests specified\"; exit 1;",
+    "test": "jest",
     "semantic-release": "semantic-release"
   },
   "bin": {
@@ -25,8 +25,10 @@
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
@@ -36,6 +38,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "favicons": "^6.2.2",
@@ -44,6 +47,7 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
+    "jest": "^27.0.5",
     "lint-staged": "^11.0.0",
     "micromatch": "^4.0.4",
     "mini-css-extract-plugin": "^1.6.0",
