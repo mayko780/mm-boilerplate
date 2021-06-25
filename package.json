@@ -11,8 +11,6 @@
     "prepare": "husky install",
     "start": "webpack server",
     "test": "jest",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
     "semantic-release": "semantic-release"
   },
   "bin": {
