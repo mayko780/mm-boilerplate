@@ -9,6 +9,8 @@ with ESLint, Prettier, Husky and lint-staged for a modern developer-workflow.
 Run:
 
 ```bash
+npm i -g @mirkonz/boilerplate
+
 npx @mirkonz/boilerplate init my-new-project-name
 ```
 
