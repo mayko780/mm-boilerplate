@@ -9,7 +9,7 @@ with ESLint, Prettier, Husky and lint-staged for a modern developer-workflow.
 Run:
 
 ```bash
-npx mirkonz-boilerplate init my-new-project-name
+npx @mirkonz/boilerplate init my-new-project-name
 ```
 
 which creates a `my-new-project-name` project folder in the current directory including the boilerplate.

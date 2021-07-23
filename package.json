@@ -57,7 +57,6 @@
     "postcss-loader": "^6.1.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.3.1",
-    "recursive-copy": "^2.0.11",
     "semantic-release": "^17.4.4",
     "style-loader": "^3.0.0",
     "tailwindcss": "^2.2.4",
@@ -67,7 +66,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "commander": "^7.2.0"
+    "commander": "^7.2.0",
+    "recursive-copy": "^2.0.11"
   },
   "repository": {
     "type": "git",
