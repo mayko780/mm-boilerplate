@@ -25,13 +25,14 @@ program.version('0.1.0')
 
 program
   .command('init [namespace]')
-  .description('Setup WordPress plugin in')
+  .description('Setup @mirkonz/boilerplate')
   .action((namespace) => {
     const destination = namespace || 'mirkonz-boilerplate'
     const sourcePath = path.resolve(__dirname, '..')
     const destinationPath = path.resolve(process.cwd(), destination)
 
     const options = {
+      dot: true,
       filter: ['**/*', '!**/.git{,/**}', '!**/node_modules{,/**}'],
     }
 
@@ -39,7 +40,7 @@ program
       if (err) {
         return console.error(err)
       }
-      console.log('done!')
+      console.log('Complete! 🚀')
     })
   })
 
